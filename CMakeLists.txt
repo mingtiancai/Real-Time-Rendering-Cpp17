@@ -4,15 +4,11 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_STANDARD 11)
 
 find_package(glfw3 REQUIRED)
-message("Found GLFW3 in " ${glfw3_INCLUDE_DIRS})
 
 INCLUDE_DIRECTORIES(${glfw3_INCLUDE_DIRS})
 MESSAGE(STATUS "FIND GLFW_INCLUDE_DIRS " ${glfw3_INCLUDE_DIRS})
 
 project(show)
-
-set(EXECUTABLE_OUTPUT_PATH ${PROJECT_RELEASE_OUTPUT_DIR})
-
 
 file(GLOB project_file glad.c main.cpp)
 
@@ -34,3 +30,5 @@ set(CGLIBS
 
 target_link_libraries(${PROJECT_NAME} ${CGLIBS}
 )
+
+add_subdirectory(src)
