@@ -5,14 +5,7 @@ set(CMAKE_C_STANDARD 11)
 
 find_package(glfw3 REQUIRED)
 
-INCLUDE_DIRECTORIES(${glfw3_INCLUDE_DIRS})
-MESSAGE(STATUS "FIND GLFW_INCLUDE_DIRS " ${glfw3_INCLUDE_DIRS})
-
-project(show)
-
-file(GLOB project_file glad.c main.cpp)
-
-add_executable(${PROJECT_NAME} ${project_file})
+project(REAL-TIME-RENDERING-CPP17)
 
 set(CGLIBS 
     -lglfw3
@@ -26,9 +19,6 @@ set(CGLIBS
     -ldl
     -lXinerama
     -lXcursor
-)
-
-target_link_libraries(${PROJECT_NAME} ${CGLIBS}
 )
 
 add_subdirectory(src)
