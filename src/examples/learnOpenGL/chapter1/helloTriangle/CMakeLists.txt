@@ -19,3 +19,11 @@ target_link_libraries(
                         ${CGLIBS} 
                         glad
 )
+
+add_executable(triangleV2 triangleV2.cpp)
+
+target_link_libraries(
+                        triangleV2
+                        ${CGLIBS} 
+                        glad
+)
