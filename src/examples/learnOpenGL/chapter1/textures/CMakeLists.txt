@@ -11,3 +11,11 @@ target_link_libraries(
                         ${CGLIBS} 
                         glad
 )
+
+add_executable(mix mix.cpp)
+
+target_link_libraries(
+                        mix
+                        ${CGLIBS} 
+                        glad
+)
