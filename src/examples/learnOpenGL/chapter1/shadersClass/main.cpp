@@ -209,6 +209,8 @@ int main()
         ourShader.use();
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, 3);
+        float offset = 0.5f;
+        ourShader.setFloat("xOffset", offset);
 
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
