@@ -19,3 +19,11 @@ target_link_libraries(
                         ${CGLIBS} 
                         glad
 )
+
+add_executable(mixSet mixSet.cpp)
+
+target_link_libraries(
+                        mixSet
+                        ${CGLIBS} 
+                        glad
+)

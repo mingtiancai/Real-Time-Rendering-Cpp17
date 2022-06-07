@@ -5,7 +5,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/src/examples/learnOpenGL/chapter1/textures/mix",
+            "program": "${workspaceFolder}/build/src/examples/learnOpenGL/chapter1/textures/mixSet",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/build/src/examples/learnOpenGL/chapter1/textures",
