@@ -11,3 +11,11 @@ target_link_libraries(
                         ${CGLIBS} 
                         glad
 )
+
+add_executable(depth depth.cpp)
+
+target_link_libraries(
+                        depth
+                        ${CGLIBS} 
+                        glad
+)
