@@ -19,3 +19,11 @@ target_link_libraries(
                         ${CGLIBS} 
                         glad
 )
+
+add_executable(multiple multiple.cpp)
+
+target_link_libraries(
+                        multiple
+                        ${CGLIBS} 
+                        glad
+)
