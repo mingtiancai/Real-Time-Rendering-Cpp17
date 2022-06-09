@@ -19,3 +19,11 @@ target_link_libraries(
                         ${CGLIBS} 
                         glad
 )
+
+add_executable(cameraMouse cameraMouse.cpp)
+
+target_link_libraries(
+                        cameraMouse
+                        ${CGLIBS} 
+                        glad
+)
