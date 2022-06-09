@@ -11,3 +11,11 @@ target_link_libraries(
                         ${CGLIBS} 
                         glad
 )
+
+add_executable(cameraDt cameraDt.cpp)
+
+target_link_libraries(
+                        cameraDt
+                        ${CGLIBS} 
+                        glad
+)
