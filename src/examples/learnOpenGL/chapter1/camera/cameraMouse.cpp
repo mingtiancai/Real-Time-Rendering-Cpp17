@@ -9,6 +9,8 @@
 #include "shader_m.h"
 
 #include <iostream>
+#include <thread>
+#include <chrono>
 
 void framebuffer_size_callback(GLFWwindow *window, int width, int height);
 void mouse_callback(GLFWwindow *window, double xpos, double ypos);
@@ -284,7 +286,8 @@ void processInput(GLFWwindow *window)
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
 
-    float cameraSpeed = static_cast<float>(2.5 * deltaTime);
+    float cameraSpeed = static_cast<float>(25 * deltaTime);
+    std::cout << deltaTime << std::endl;
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
         cameraPos += cameraSpeed * cameraFront;
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
@@ -310,6 +313,10 @@ void mouse_callback(GLFWwindow *window, double xposIn, double yposIn)
 {
     float xpos = static_cast<float>(xposIn);
     float ypos = static_cast<float>(yposIn);
+    std::cout << "x: " << xpos << std::endl;
+    std::cout << "y: " << ypos << std::endl;
+
+    // std::this_thread::sleep_for(std::chrono::milliseconds(10));
 
     if (firstMouse)
     {
@@ -323,7 +330,7 @@ void mouse_callback(GLFWwindow *window, double xposIn, double yposIn)
     lastX = xpos;
     lastY = ypos;
 
-    float sensitivity = 0.1f; // change this value to your liking
+    float sensitivity = 0.01f; // change this value to your liking
     xoffset *= sensitivity;
     yoffset *= sensitivity;
 
