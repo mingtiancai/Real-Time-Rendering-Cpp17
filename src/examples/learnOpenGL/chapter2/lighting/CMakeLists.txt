@@ -11,3 +11,11 @@ target_link_libraries(
                         ${CGLIBS} 
                         glad
 )
+
+add_executable(lighting_sp lighting_sp.cpp)
+
+target_link_libraries(
+                        lighting_sp
+                        ${CGLIBS} 
+                        glad
+)
