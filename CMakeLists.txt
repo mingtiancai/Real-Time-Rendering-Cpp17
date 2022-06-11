@@ -17,8 +17,6 @@ endif()
 
 find_package(glfw3 REQUIRED)
 
-# find_package(Boost REQUIRED)
-
 project(REAL-TIME-RENDERING-CPP17)
 
 set(CGLIBS 
@@ -33,6 +31,7 @@ set(CGLIBS
     -ldl
     -lXinerama
     -lXcursor
+    -lassimp
 )
 
 add_subdirectory(src)

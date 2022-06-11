@@ -19,3 +19,11 @@ target_link_libraries(
                         ${CGLIBS} 
                         glad
 )
+
+add_executable(materials materials.cpp)
+
+target_link_libraries(
+                        materials
+                        ${CGLIBS} 
+                        glad
+)
